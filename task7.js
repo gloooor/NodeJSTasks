@@ -5,8 +5,6 @@ const http = require("http");
 const port = 4001;
 
 const server = http.createServer(function(req, res) {
-  console.log(req.url, req.method);
-
   if (req.method === "GET") {
     res.writeHead(200, { "Content-Type": "text/html; charset=utf-8" });
     res.write(fs.readFileSync("index2.html"));
@@ -14,7 +12,6 @@ const server = http.createServer(function(req, res) {
   } else if (req.url === "/upload" && req.method === "POST") {
     const form = new formidable.IncomingForm();
     form.parse(req, function(err, fields, files) {
-      console.log(files, files.filetoupload);
       const oldpath = files.filetoupload.path;
       const newpath =
         "C:/glorichkaProduction/NodeJSTasks/files/" + files.filetoupload.name;
