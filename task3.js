@@ -1,6 +1,5 @@
 const http = require("http");
 const fs = require("fs");
-const parser = require("url");
 const qs = require("querystring");
 const funcs = require(__dirname + "/funcs");
 
