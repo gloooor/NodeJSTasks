@@ -10,7 +10,7 @@ module.exports = {
   sum: (res, x, y) => {
     if (x && y) {
       res.writeHead(200, { "Content-Type": "text/plain; charset=utf-8" });
-      res.end(`x + y = ${+result.x + +result.y}`);
+      res.write(`x + y = ${+x + +y}`);
     } else {
       res.writeHead(200, { "Content-Type": "text/plain; charset=utf-8" });
       res.end(`Invalid values`);
@@ -19,7 +19,7 @@ module.exports = {
   sub: (res, x, y) => {
     if (x && y) {
       res.writeHead(200, { "Content-Type": "text/plain; charset=utf-8" });
-      res.end(`x - y = ${+result.x - +result.y}`);
+      res.write(`x - y = ${+x - +y}`);
     } else {
       res.writeHead(200, { "Content-Type": "text/plain; charset=utf-8" });
       res.end(`Invalid values`);
@@ -28,7 +28,7 @@ module.exports = {
   conc: (res, x, y) => {
     if (x && y) {
       res.writeHead(200, { "Content-Type": "text/plain; charset=utf-8" });
-      res.end(`x concat y = ${result.x + result.y}`);
+      res.write(`x concat y = ${x + y}`);
     } else {
       res.writeHead(200, { "Content-Type": "text/plain; charset=utf-8" });
       res.end(`Invalid values`);
