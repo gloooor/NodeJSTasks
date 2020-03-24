@@ -1,11 +1,10 @@
 const http = require("http");
-const port = 4001;
+const port = 40001;
 const method = "POST";
 
 const server = http.createServer((req, res) => {
   const isValidRequest =
     req.method === method && req.headers["content-type"] === "application/json";
-  console.log(isValidRequest);
   if (isValidRequest) {
     let body = [];
     req.on("data", data => {

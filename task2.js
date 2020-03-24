@@ -2,7 +2,7 @@ const http = require("http");
 const parser = require("url");
 const funcs = require(__dirname + "/funcs");
 
-const port = 4001;
+const port = 40001;
 
 const methods = {
   GET: ["/SUM", "/SUB", "/CONC"]

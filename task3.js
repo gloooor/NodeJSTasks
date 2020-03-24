@@ -3,7 +3,7 @@ const fs = require("fs");
 const qs = require("querystring");
 const funcs = require(__dirname + "/funcs");
 
-const port = 4001;
+const port = 40001;
 
 const server = http.createServer((req, res) => {
   let body = "";
@@ -16,7 +16,6 @@ const server = http.createServer((req, res) => {
     });
     req.on("end", () => {
       let result = qs.parse(body);
-      console.log(result);
       switch (result.but) {
         case "Sum": {
           funcs.sum(res, result.x, result.y);
