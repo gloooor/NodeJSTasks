@@ -2,13 +2,12 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>Server 3</title>
   </head>
   <body>
-    <form action="/upload" method="post" enctype="multipart/form-data">
+    <form action="/" method="POST" enctype="multipart/form-data">
       <input type="file" name="filetoupload" /><br />
-      <input type="submit" name="but" value="SAVE" />
-      <input type="submit" name="but" value="CANCEL" />
+      <input type="submit" formaction="/upload" name="but" value="SAVE" />
+      <input type="submit" formaction="/CANCEL" name="but" value="CANCEL" />
     </form>
   </body>
 </html>
